@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Super titre</title>
 
@@ -12,12 +13,14 @@
         .hidden {
             display: none;
         }
+
         .alert {
             background-color: red;
             color: #FFF;
             font-size: 3em;
             text-align: center;
         }
+
         button {
             width: 30%;
             background-color: crimson;
@@ -30,6 +33,7 @@
         }
     </style>
 </head>
+
 <body>
     <p class="hidden alert">Mon super message caché !</p>
     <button>Afficher le message</button>
@@ -42,7 +46,17 @@
             l'événement sur le bouton.
     -->
 
-    <script type="text/javascript" src="listen.js"></script>
-    
+    <script type="text/javascript" src="listen.js">
+        let boutton = document.querySelector("button");
+        boutton.addEventListener("click", montre);
+        
+        function montre() {
+        let paragraphe = document.querySelector("p");
+        paragraphe.classList.remove("hidden");   
+        }
+        
+    </script>
+
 </body>
+
 </html>
