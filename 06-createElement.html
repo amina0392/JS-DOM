@@ -12,8 +12,14 @@
 
 <!-- À appeler dans une feuille js à part -->
 <script type="text/javascript">
-    let coffee = document.querySelector('#coffee');
+    let coffee = document.querySelector('#coffee'); 
+    let favoriteCoffee = document.createElement("span");
 
+    favoriteCoffee.className = "selected";
+    favoriteCoffee.textContent = "Café au lait";
+    favoriteCoffee.style.color = "brown",
+    coffee.appendChild(favoriteCoffee);
+    
     /*
      * Créer et "injecter" dans coffee un élément (au sens du DOM) de type "span" avec le café de votre choix.
      * Afin de corser l'affaire, ce café (plus exactement le "span" qui l'encadre) aura :
